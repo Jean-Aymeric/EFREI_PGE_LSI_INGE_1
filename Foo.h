@@ -17,12 +17,14 @@ class Foo {
   const Qux *qux;
   std::vector<Baz*> bazs;
   Corge *corge;
+  std::vector<Grault*> graults; 
 
  public:
   Foo(const Bar &bar);
   void addBaz(Baz &baz);
   void setCorge(Corge &corge);
   Corge* getCorge();
+  void addGrault();
 
   ~Foo();
 

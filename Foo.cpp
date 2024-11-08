@@ -6,8 +6,11 @@
 
 Foo::Foo(const Bar &bar) {
 	this->bar = &bar;
+	this->bazs = std::vector<Baz*>(); 
 	this->qux = new Qux();
+	this->graults = std::vector<Grault*>();
 }
+
 void Foo::addBaz(Baz &baz) {
 	this->bazs.push_back(&baz);
 }
@@ -24,3 +27,6 @@ Corge *Foo::getCorge() {
 	return this->corge;
 }
 
+void Foo::addGrault() {
+	this->graults.push_back(new Grault(this));
+}

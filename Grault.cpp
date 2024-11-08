@@ -3,3 +3,7 @@
 //
 
 #include "Grault.h"
+
+Grault::Grault(Foo *foo) {
+    this->foo_ = foo;
+}
